@@ -59,7 +59,12 @@ namespace ComicBookGallery.DAL
         }
         };
 
-        public ComicBook GetComicBook(int id)
+        public ComicBook[] GetComicBooks()
+        {
+            return _comicBooks;
+        }
+
+        public ComicBook GetComicBooks(int id)
         {
             ComicBook comicBookToReturn = null;
             foreach (var comicBook in _comicBooks)
